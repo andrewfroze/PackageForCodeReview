@@ -12,7 +12,7 @@ import andrewfroze.JavaFundamental.JavaFundamentalOptionalTask1;
 
 public class JavaFundamentalMain {
 
-    public void RunCheckingMainTask() {
+    public static void main( String[] args ) {
         Scanner scan = new Scanner(System.in);
         System.out.println("Which part of all tasks do you want to check: \n Main Task      : 1 \n Optional Task 1: 2");
         int numAnswer = scan.nextInt();

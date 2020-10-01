@@ -1,9 +1,9 @@
-package Planes;
+package andrewfroze.AircompanyMasterRedacted.Planes;
 
-import models.ClassificationLevel;
-import models.ExperimentalTypes;
+import andrewfroze.AircompanyMasterRedacted.models.ClassificationLevel;
+import andrewfroze.AircompanyMasterRedacted.models.ExperimentalTypes;
 
-public class experimentalPlane extends Planes.Plane {
+public class experimentalPlane extends Plane {
 
     private ExperimentalTypes type;
     private ClassificationLevel classificationLevel;

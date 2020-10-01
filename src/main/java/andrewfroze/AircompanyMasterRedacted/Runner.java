@@ -1,8 +1,9 @@
-import models.MilitaryType;
-import Planes.MilitaryPlane;
-import Planes.PassengerPlane;
-import Planes.Plane;
-import Airport.Airport;
+package andrewfroze.AircompanyMasterRedacted;
+
+import andrewfroze.AircompanyMasterRedacted.models.MilitaryType;
+import andrewfroze.AircompanyMasterRedacted.Planes.MilitaryPlane;
+import andrewfroze.AircompanyMasterRedacted.Planes.PassengerPlane;
+import andrewfroze.AircompanyMasterRedacted.Planes.Plane;
 
 import java.util.Arrays;
 import java.util.List;

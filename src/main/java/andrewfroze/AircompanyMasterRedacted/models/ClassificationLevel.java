@@ -1,4 +1,4 @@
-package models;
+package andrewfroze.AircompanyMasterRedacted.models;
 
 public enum ClassificationLevel {
     UNCLASSIFIED, CONFIDENTIAL, SECRET, TOP_SECRET

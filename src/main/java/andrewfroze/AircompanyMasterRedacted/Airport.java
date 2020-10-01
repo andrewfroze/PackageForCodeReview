@@ -1,9 +1,9 @@
-package Airport;
-import Planes.experimentalPlane;
-import models.MilitaryType;
-import Planes.MilitaryPlane;
-import Planes.PassengerPlane;
-import Planes.Plane;
+package andrewfroze.AircompanyMasterRedacted;
+import andrewfroze.AircompanyMasterRedacted.Planes.experimentalPlane;
+import andrewfroze.AircompanyMasterRedacted.models.MilitaryType;
+import andrewfroze.AircompanyMasterRedacted.Planes.MilitaryPlane;
+import andrewfroze.AircompanyMasterRedacted.Planes.PassengerPlane;
+import andrewfroze.AircompanyMasterRedacted.Planes.Plane;
 
 import java.util.*;
 
@@ -19,14 +19,13 @@ public class Airport {
     }
 
     public List<PassengerPlane> getPassengerPlane() {
-        List<? extends Plane> l = this.planes;
-        List<PassengerPlane> x = new ArrayList<>();
-        for (Plane p : l) {
-            if (p instanceof PassengerPlane) {
-                x.add((PassengerPlane) p);
+        List<PassengerPlane> passengerPlanes = new ArrayList<>();
+        for (Plane plane : planes) {
+            if (plane instanceof PassengerPlane) {
+                passengerPlanes.add((PassengerPlane) plane);
             }
         }
-        return x;
+        return passengerPlanes;
     }
 
     public List<MilitaryPlane> getMilitaryPlanes() {

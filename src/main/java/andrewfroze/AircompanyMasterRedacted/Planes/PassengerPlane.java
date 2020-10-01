@@ -1,8 +1,8 @@
-package Planes;
+package andrewfroze.AircompanyMasterRedacted.Planes;
 
 import java.util.Objects;
 
-public class PassengerPlane extends Planes.Plane {
+public class PassengerPlane extends Plane {
 
     private int passengersCapacity;
 

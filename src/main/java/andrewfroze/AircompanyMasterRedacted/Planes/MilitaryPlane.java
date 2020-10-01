@@ -1,10 +1,10 @@
-package Planes;
+package andrewfroze.AircompanyMasterRedacted.Planes;
 
-import models.MilitaryType;
+import andrewfroze.AircompanyMasterRedacted.models.MilitaryType;
 
 import java.util.Objects;
 
-public class MilitaryPlane extends Planes.Plane {
+public class MilitaryPlane extends Plane {
 
     private MilitaryType type;
 

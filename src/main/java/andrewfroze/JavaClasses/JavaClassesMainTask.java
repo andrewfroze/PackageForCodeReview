@@ -7,13 +7,14 @@ import andrewfroze.JavaFundamental.JavaFundamentalMainTask;
 import java.util.*;
 
 public class JavaClassesMainTask {
-    HashMap<Integer, Faculties> faculties = new HashMap<Integer, Faculties>();
-    int numberOfStudents = 1000;
-    int numberOfGroups = 5;
-    int numberOfCourses = 5;
-    Student students[] = new Student[numberOfStudents];
+    static HashMap<Integer, Faculties> faculties = new HashMap<Integer, Faculties>();
+    static int numberOfStudents = 1000;
+    static int numberOfGroups = 5;
+    static int numberOfCourses = 5;
+    static Student students[] = new Student[numberOfStudents];
 
-    public void RunCheckingMainTask() {
+
+    public static void main(String[] args) {
         GenerateRandomStudents();
         Scanner scan = new Scanner(System.in);
         JavaFundamentalMainTask mainTask = new JavaFundamentalMainTask();
@@ -63,7 +64,7 @@ public class JavaClassesMainTask {
         }
     }
 
-    private void GenerateRandomStudents () {
+    private static void GenerateRandomStudents() {
         String day;
         String month;
         Random random = new Random();
@@ -104,21 +105,21 @@ public class JavaClassesMainTask {
     }
 
 
-    private void TaskA() {
+    private static   void TaskA() {
         Faculties facultyToPrint;
         facultyToPrint = ChoosingFaculty();
         System.out.println("The list for " + String.valueOf(facultyToPrint).toLowerCase() + " faculty:");
         PrintFacultyList(facultyToPrint);
     }
 
-    private void TaskB() {
+    private static void TaskB() {
         for (int i = 1; i <=6; i++) {
             System.out.println(faculties.get(i) + " FACULTY:");
             PrintFacultyList(faculties.get(i));
         }
     }
 
-    private void TaskC () {
+    private static void TaskC () {
         int yearForCheck;
         Scanner yearScanner = new Scanner(System.in);
         System.out.println("Enter the year of birth:");
@@ -132,7 +133,7 @@ public class JavaClassesMainTask {
         }
     }
 
-    private void TaskD() {
+    private static void TaskD() {
         Faculties facultyToPrint = ChoosingFaculty();
         int courseToPrint = ChoosingCourseOrGroup("course", numberOfCourses);
         int groupToPrint = ChoosingCourseOrGroup("group", numberOfGroups);
@@ -141,7 +142,7 @@ public class JavaClassesMainTask {
 
     }
 
-    private Faculties ChoosingFaculty () {
+    private static Faculties ChoosingFaculty () {
         Scanner scanFaculty = new Scanner (System.in);
         int facultyToPrint = 0;
         String answer;
@@ -170,7 +171,7 @@ public class JavaClassesMainTask {
         return faculties.get(facultyToPrint);
     }
 
-    private  int ChoosingCourseOrGroup (String courseOrGroup, int numberOfCoursesOrGroups) {
+    private static int ChoosingCourseOrGroup (String courseOrGroup, int numberOfCoursesOrGroups) {
         Scanner scanFaculty = new Scanner (System.in);
         int CourseOrGroupToPrint = 0;
         int answer;
@@ -191,21 +192,21 @@ public class JavaClassesMainTask {
         return CourseOrGroupToPrint;
     }
 
-    private void PrintFacultyList(Faculties faculty) {
+    private static void PrintFacultyList(Faculties faculty) {
         for (int j = 1; j<=numberOfCourses; j++) {
             System.out.println("\t" + j + " Course:");
             PrintCourseList(faculty, j);
         }
     }
 
-    private void PrintCourseList(Faculties faculty, int course) {
+    private static void PrintCourseList(Faculties faculty, int course) {
         for (int k = 1; k <=numberOfGroups; k++) {
             System.out.println("\t \t" + k + " Group:");
             PrintGroupList(faculty, course, k);
         }
     }
 
-    private void PrintGroupList(Faculties faculty, int course, int group) {
+    private static void PrintGroupList(Faculties faculty, int course, int group) {
         for (int l = 0; l < numberOfStudents; l++) {
             if (students[l].getFaculty() == faculty && students[l].getCourse() == course && students[l].getGroup() == group) {
                 System.out.println("\t \t \t" + students[l].getSurname() + " " + students[l].getName() + " " + students[l].getPatronymic());
